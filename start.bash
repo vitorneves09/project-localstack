@@ -2,7 +2,7 @@
 
 # Variáveis
 LOCALSTACK_CONTAINER="localstack"
-BUCKET_NAME=s3-marketplace-financeiro-dev
+BUCKET_NAME=s3-localstack-dev
 ENDPOINT_URL="http://localhost:4566"
 
 # Checa dependências
@@ -35,3 +35,8 @@ else
   docker exec $LOCALSTACK_CONTAINER awslocal s3 mb s3://$BUCKET_NAME
   echo "Bucket '$BUCKET_NAME' criado."
 fi
+
+echo ""
+echo "===================="
+echo "Nome do Bucket: $BUCKET_NAME"
+echo "===================="
